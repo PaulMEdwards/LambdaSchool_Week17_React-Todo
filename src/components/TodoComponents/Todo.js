@@ -1,20 +1,19 @@
-import React from "react";
+import React from 'react';
 
-class Todo extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      todoName: ""
-    };
-  }
+const Todo = (props) => {
+  let classAddendum = props.todo.completed ? " completed" : "";
 
-  render() {
-    console.log('Todo render()');
-    
-    return (
-      <div>(Todo goes here)</div>
-    );
-  }
+  const handleClick = () => {
+    props.toggleDone(props.todo.id);
+  };
+
+  return (
+    <div className={"todo"+classAddendum} onClick={handleClick}>
+      <p>
+        <span>ID: {props.todo.id}</span> - <span>Todo: {props.todo.todo}</span>
+      </p>
+    </div>
+  );
 }
 
 export default Todo;

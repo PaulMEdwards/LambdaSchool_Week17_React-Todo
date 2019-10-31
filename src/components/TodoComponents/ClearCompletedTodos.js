@@ -1,20 +1,11 @@
-import React from "react";
+import React from 'react';
 
-class ClearCompletedTodos extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      todoName: ""
-    };
-  }
-
-  render() {
-    console.log('ClearCompletedTodos render()');
-    
-    return (
-      <div>(ClearCompletedTodos goes here)</div>
-    );
-  }
+const ClearCompletedTodos = (props) => {
+  return (
+    <button className="clear-button" onClick={props.clearDone}>
+      Clear Completed
+    </button>
+  );
 }
 
 export default ClearCompletedTodos;
