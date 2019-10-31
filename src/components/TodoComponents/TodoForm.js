@@ -1,6 +1,6 @@
 import React from 'react';
 
-class TodoForm extends React.Component {
+class ToDoForm extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -17,7 +17,7 @@ class TodoForm extends React.Component {
   handleSubmit = (e) => {
     e.preventDefault();
     if (this.state.todoName !== "") {
-      this.props.addTodo(this.state.todoName);
+      this.props.addToDo(this.state.todoName);
       this.setState({
         todoName: ""
       });
@@ -25,7 +25,7 @@ class TodoForm extends React.Component {
   };
 
   render() {
-    console.log('TodoForm render()');
+    console.log('ToDoForm render()');
     
     return (
       <form onSubmit={this.handleSubmit}>
@@ -42,4 +42,4 @@ class TodoForm extends React.Component {
   }
 }
 
-export default TodoForm;
+export default ToDoForm;

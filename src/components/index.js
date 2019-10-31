@@ -1,4 +1,4 @@
-export { default as TodoForm } from './TodoComponents/TodoForm';
-export { default as TodoList } from './TodoComponents/TodoList';
-export { default as Todo } from './TodoComponents/Todo';
-export { default as ClearCompletedTodos } from './TodoComponents/ClearCompletedTodos';
+export { default as ToDoForm } from './TodoComponents/ToDoForm';
+export { default as ToDoList } from './TodoComponents/ToDoList';
+export { default as ToDo } from './TodoComponents/ToDo';
+export { default as ClearCompletedToDos } from './TodoComponents/ClearCompletedToDos';

@@ -1,12 +1,12 @@
 import React from 'react';
 
-import Todo from './Todo';
+import ToDo from './ToDo';
 
-const TodoList = (props) => {
+const ToDoList = (props) => {
   return (
-    <div className="todo-list">
+    <div className="ToDoList">
       {props.todos.map(todo => (
-        <Todo
+        <ToDo
           key={todo.id}
           todo={todo}
           toggleDone={props.toggleDone}
@@ -16,4 +16,4 @@ const TodoList = (props) => {
   );
 }
 
-export default TodoList;
+export default ToDoList;

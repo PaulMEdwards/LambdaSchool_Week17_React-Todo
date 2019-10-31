@@ -1,6 +1,8 @@
 import React from 'react';
 
-import { TodoList, TodoForm, ClearCompletedTodos } from './components';
+import { ToDoList, ToDoForm, ClearCompletedToDos } from './components';
+
+import "./ToDo.css";
 
 const data = [
   {
@@ -49,8 +51,8 @@ class App extends React.Component {
     });
   };
 
-  addTodo = todoName => {
-    console.log('addTodo: ', todoName);
+  addToDo = todoName => {
+    console.log('addToDo: ', todoName);
     const d = Date.now();
     console.log('id: ', d);
     
@@ -70,19 +72,19 @@ class App extends React.Component {
   // this component is going to take care of state, and any change handlers you need to work with your state
   render() {
     return (
-      <div className="TodosApp">
+      <div className="ToDoApp">
         <header>
           <h1>To Dos</h1>
-          <TodoForm addTodo={this.addTodo} />
+          <ToDoForm addToDo={this.addToDo} />
         </header>
-        <section className="TodoList">
-          <TodoList
+        <section className="ToDoList">
+          <ToDoList
             todos={this.state.todos}
             toggleDone={this.toggleDone}
           />
         </section>
         <footer>
-          <ClearCompletedTodos clearDone={this.clearDone} />
+          <ClearCompletedToDos clearDone={this.clearDone} />
         </footer>
       </div>
     );

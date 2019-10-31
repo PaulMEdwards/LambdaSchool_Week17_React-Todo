@@ -1,0 +1,20 @@
+.ToDoApp {
+}
+
+header {}
+
+form {}
+input {}
+button {}
+
+section.ToDoList {}
+div.ToDoList {}
+
+div.ToDo {}
+div.Completed {
+  text-decoration: line-through;
+}
+
+footer {}
+
+.ButtonClear {}

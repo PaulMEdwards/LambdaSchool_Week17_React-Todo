@@ -1,11 +1,11 @@
 import React from 'react';
 
-const ClearCompletedTodos = (props) => {
+const ClearCompletedToDos = (props) => {
   return (
-    <button className="clear-button" onClick={props.clearDone}>
+    <button className="ButtonClear" onClick={props.clearDone}>
       Clear Completed
     </button>
   );
 }
 
-export default ClearCompletedTodos;
+export default ClearCompletedToDos;
