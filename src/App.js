@@ -52,13 +52,14 @@ class App extends React.Component {
   addTodo = todoName => {
     console.log('addTodo: ', todoName);
     const d = Date.now();
+    console.log('id: ', d);
     
     this.setState({
       todos: [
         ...this.state.todos,
         {
           todo: todoName,
-          id: d.getMilliseconds(),
+          id: d,
           completed: false
         }
       ]
@@ -71,7 +72,7 @@ class App extends React.Component {
     return (
       <div className="TodosApp">
         <header>
-          <h1>To Do</h1>
+          <h1>To Dos</h1>
           <TodoForm addTodo={this.addTodo} />
         </header>
         <section className="TodoList">
